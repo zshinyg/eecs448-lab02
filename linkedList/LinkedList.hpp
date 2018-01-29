@@ -1,6 +1,6 @@
 /**
-*	@author
-*	@date
+*	@author Coltyn Gatton
+*	@date 1/29/18
 *	@file LinkedList.hpp
 *	@brief Implementation file for templated LinkedList class
 */
@@ -39,6 +39,8 @@ bool LinkedList<T>::search(T value) const
 	bool isFound = false;
 
 	while(temp != nullptr){
+
+
 
 		if( value == temp->getValue()){
 			isFound = true;
@@ -120,6 +122,14 @@ bool LinkedList<T>::removeBack()
 		m_size--;
 		secondintoLast->setNext(nullptr);
 		isRemoved = true;
+
+	}
+
+
+
+
+
+	return(isRemoved);
 }
 
 template <typename T>
